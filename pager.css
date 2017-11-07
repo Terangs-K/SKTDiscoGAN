@@ -1,0 +1,24 @@
+#paging {
+    list-style-type:none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+#paging li {      
+    margin:3px;
+    cursor:pointer;
+    float:left;
+    color: #666;
+    font-size: 1.1em;
+}
+#paging li.selected {      
+    color: #0080ff;
+    font-weight:bold;
+}
+#paging li:hover {      
+    color: #0080ff;
+}
