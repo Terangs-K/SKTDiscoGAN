@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/pager.css" rel="stylesheet">
+</head>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/pager.js"> </script>
+<script>
+  
+  
+  var page = new pager();
+  page.buttonClickCallback = test;
+  function listContent () {
+    page.renderpager(300);  
+  }
+  
+  function test() {
+    page.renderpager(300);  
+    var html = [];
+        
+    $.getJSON('test.json', function(data){
+        $.each(data, function(i, item) { 
+          html.push('<div >');
+          //html.push('<h3 >' + item.firstName + '</h3>');
+          //html.push('<div >' + item.lastName + '</div>');
+          //html.push('<div >' + item.age + '</div>');
+          //html.push('<div >' + item.address.streetAddress + '</div>');
+          //html.push('<div >' + item.itemlists[i].title + '</div>');
+          html.push('<div >' + item.title + '</div>');
+          html.push('<img src = "' + item.imgpath +'"></img>');
+          html.push('</div>');            
+        });
+    
+      console.log(html);
+    
+      $('#contents').html(html);
+      
+      }
+    ).error(function(jqXhr, textStatus, error) {
+          alert("ERROR: " + textStatus + ", " + error);
+    });
+  }
+  
+  $(document).ready(function(){
+      listContent();
+  });
+
+</script>
+
+<body>
+  <div id="main_div">
+    <div id="contents"><div>
+  <div>
+  <div id="footer">
+    <ul id="paging">
+    </ul>
+  <div>
+</body>
+</html>
