@@ -1,5 +1,4 @@
 var pager = function(options) {
-
     var defaults = {
         currentPage : 1 // 현재페이지    
         ,pageSize : 5 // 페이지 사이즈 (화면 출력 페이지 수)
@@ -41,8 +40,19 @@ pager.prototype = {
         var n_block = Math.ceil(currentPage / pageSize);
 
         //페이징의 시작페이지와 끝페이지 구하기
-        var s_page = (n_block - 1) * pageSize + 1; // 현재블럭의 시작 페이지
-        var e_page = n_block * pageSize; // 현재블럭의 끝 페이지
+        // 현재블럭의 시작 페이지
+        if (currentPage >= totalPageCnt-2)
+          var s_page = totalPageCnt-4;
+        else if (currentPage <= 3)
+          var s_page = 1;
+        else
+          var s_page = currentPage-2;
+          
+        // 현재블럭의 끝 페이지
+        if (currentPage <= 3)
+          var e_page = 5; 
+        else
+          var e_page = currentPage+2; 
 
         // setup $pager to hold render
         var $pager = $('#paging'); // TODO: 페이지를 출력할 영역. ( 출력할 영역의 ID를 인자로..  )
@@ -50,8 +60,7 @@ pager.prototype = {
 
 
         //처음, 이전 버튼 추가
-        $pager.append(this.renderButton('first', totalPageCnt, _.buttonClickCallback))
-              .append(this.renderButton('prev', totalPageCnt,    _.buttonClickCallback));
+        $pager.append(this.renderButton('first', totalPageCnt, _.buttonClickCallback));
 
         //페이지 나열
         for (var j = s_page; j <= e_page; j++) {
@@ -70,8 +79,7 @@ pager.prototype = {
         }
 
         //다음, 마지막 버튼 추가
-        $pager.append(this.renderButton('next', totalPageCnt,    _.buttonClickCallback))
-              .append(this.renderButton('last', totalPageCnt,    _.buttonClickCallback));
+        $pager.append(this.renderButton('last', totalPageCnt,    _.buttonClickCallback));
 
         return $pager;
     },
@@ -105,30 +113,18 @@ pager.prototype = {
         case "first":
             destPage = 1;
             $Button.addClass('active');
-            $Button.html('처음');
-            break;
-
-        case "prev":
-            destPage = currentPage - 1;
-            $Button.addClass('active');
-            $Button.html('이전');
-            break;
-
-        case "next":
-            destPage = currentPage + 1;
-            $Button.addClass('active');
-            $Button.html('다음');
+            $Button.html('처음&nbsp&nbsp');
             break;
 
         case "last":
             destPage = totalPageCnt;
             $Button.addClass('active');
-            $Button.html('마지막');
+            $Button.html('&nbsp&nbsp마지막 (' + totalPageCnt + ')');
             break;
         }
 
         // disable and 'grey' out buttons if not needed.
-        if (buttonLabel == "first" || buttonLabel == "prev") { //1페이지에서는 처음, 이전 버튼 안보이게 
+        if (buttonLabel == "first") { //1페이지에서는 처음, 이전 버튼 안보이게 
 
             if(    currentPage <= 1 ) $Button.addClass('pgEmpty').css("display", "none") 
             else $Button.click(function() {    _.initNum(destPage); buttonClickCallback(); });
