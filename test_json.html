@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/pager.css" rel="stylesheet">
 </head>
+
+<body>
+  <div id="main_div">
+    <div id="contents"></div>
+  </div>
+  <div id="footer">
+    <ul id="paging">
+    </ul>
+  </div>
+</body>
+</html>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/pager.js"> </script>
@@ -14,27 +25,23 @@
   var page = new pager();
   page.buttonClickCallback = test;
   function listContent () {
-    page.renderpager(300);  
+    page.renderpager(350);  
   }
   
   function test() {
-    page.renderpager(300);  
+    page.renderpager(350);
+    alert(page.opts.currentPage);
     var html = [];
         
     $.getJSON('test.json', function(data){
         $.each(data, function(i, item) { 
-          html.push('<div >');
-          //html.push('<h3 >' + item.firstName + '</h3>');
-          //html.push('<div >' + item.lastName + '</div>');
-          //html.push('<div >' + item.age + '</div>');
-          //html.push('<div >' + item.address.streetAddress + '</div>');
-          //html.push('<div >' + item.itemlists[i].title + '</div>');
+          html.push('<div id="contents">');
           html.push('<div >' + item.title + '</div>');
           html.push('<img src = "' + item.imgpath +'"></img>');
           html.push('</div>');            
         });
     
-      console.log(html);
+      //console.log(html);
     
       $('#contents').html(html);
       
@@ -49,14 +56,3 @@
   });
 
 </script>
-
-<body>
-  <div id="main_div">
-    <div id="contents"><div>
-  <div>
-  <div id="footer">
-    <ul id="paging">
-    </ul>
-  <div>
-</body>
-</html>
