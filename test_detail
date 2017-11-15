@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <div>
+    <button id="btn_back">
+      뒤로가기
+    </button>
+    <p>제목은 이렇게 저렇게</p>
+    <br>    
+    <p>글쓴이는 이렇게</p>
+    <p>시간은 저렇게</p>
+    <img src="img/04.PNG" />
+    <br>    
+    <p>내용은 요기에<br>쓰면 됩니다.<br>요기요기</p>
+    <div class="btn_div">
+      <button>좋아요</button>
+      <button>댓글달기</button>
+      <button id="btn_del">삭제하기</button>
+      <button id="btn_modi">수정하기</button>
+    </div>
+    <button id="btn_hidden">숨기기</button>
+    <div>
+      <ul>
+        <li>
+          <p>댓글 01 입니다.</p>
+          <p>댓글 02 입니다.</p>
+          <p>댓글 03 입니다.</p>
+          <p>댓글 04 입니다.</p>
+          <p>댓글 05 입니다.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+.btn_div {
+  display: table
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn_hide { 
+  visibility: hidden;
+}
+ 
+ul {
+  list-style-type: none;
+}
+ 
+h3 {
+  font-size: 20px;
+}
+ 
+li p {
+  font-size: 12px;
+}
+</style>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/pager.js"> </script>
+<script>
+  
+  $("#btn_back").click(function(){
+    window.history.back();
+  });
+  
+  $("#btn_hidden").click(function(){
+    if ($("#btn_del").hasClass('btn_hide')) {
+      $("#btn_del").removeClass('btn_hide');
+      $("#btn_modi").removeClass('btn_hide');
+    } else {
+      $("#btn_del").addClass('btn_hide');
+      $("#btn_modi").addClass('btn_hide');
+    };
+  });
+  
+</script>
