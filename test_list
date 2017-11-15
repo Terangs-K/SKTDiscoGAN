@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li class="li_click">
+        <img src="img/01.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/02.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>2017-11-17</p>
+        <p>C07656</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/03.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+      
+      <li class="li_click">
+        <img src="img/04.PNG" />
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+
+<style>
+* {margin: 0; padding: 0;}
+ 
+div {
+  margin: 20px;
+}
+ 
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+ 
+h3 {
+  font-size: 20px;
+}
+ 
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+ 
+li p {
+  font-size: 12px;
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+}
+ 
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+</style>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/pager.js"> </script>
+<script>
+  
+  function test() {
+    var html = [];
+        
+    $.getJSON('test.json', function(data){
+        $.each(data, function(i, item) { 
+          html.push('<div id="contents">');
+          html.push('<div >' + item.title + '</div>');
+          html.push('<img src = "' + item.imgpath +'"></img>');
+          html.push('</div>');            
+        });
+    
+      //$('#contents').html(html);
+      
+      }
+    ).error(function(jqXhr, textStatus, error) {
+          alert("ERROR: " + textStatus + ", " + error);
+    });
+  }
+  
+  $(document).ready(function(){
+      //listContent();
+      $('.li_click').click(function () {
+        window.location='test_detail.html';
+      });
+  });
+  
+  
+
+</script>
