@@ -1,0 +1,126 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+img{
+  max-width:180px;
+}
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}
+</style>
+
+<body>
+
+<input type='file' onchange="readURL(this);" />
+<img id="blah" src="http://placehold.it/180" alt="your image" />
+<button id="btn_down" onclick="readRotateURL()">오른쪽으로 돌리기</button>
+<button id="btn_down" onclick="downImage()">다운로드</button>
+</body>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="exif.js"></script>
+<script type='text/javascript'>
+  var dataUrl="";
+
+  function readURL(input) {
+      var file = input.files[0];
+      
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+  
+          reader.onload = function (e) {
+              var image = new Image();
+              image.setAttribute('crossOrigin', 'anonymous');
+              image.src = e.target.result;
+              image.onload = function (imageEvent) {
+              
+              // Resize the image
+              var canvas = document.createElement('canvas'),
+                  max_size = 200,// TODO : pull max size from a site config
+                  width = image.width,
+                  height = image.height;
+                  
+              if (width > height) {
+                  if (width > max_size) {
+                      height *= max_size / width;
+                      width = max_size;
+                  }
+              } else {
+                  if (height > max_size) {
+                      width *= max_size / height;
+                      height = max_size;
+                  }
+              }
+              canvas.width = width;
+              canvas.height = height;
+              canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+              dataUrl = canvas.toDataURL('image/jpeg');
+              $('#blah').attr('src', e.target.result);
+            };
+          }
+  
+          reader.readAsDataURL(file);
+      }
+  }
+
+  function readRotateURL() {
+    
+    var image = new Image();
+    image.setAttribute('crossOrigin', 'anonymous');
+    image.src = dataUrl;
+    
+    image.onload = function (imageEvent) {
+    
+    	var width = image.width,
+      		height = image.height,
+          canvas = document.createElement('canvas'),
+      		ctx = canvas.getContext("2d");
+      		
+      
+      canvas.width = height;
+      canvas.height = width;
+      
+      ctx.transform(0, 1, -1, 0, height , 0);
+  
+      // draw image
+      ctx.drawImage(image, 0, 0);
+      dataUrl = canvas.toDataURL('image/jpeg');
+    
+      $('#blah').attr('src', dataUrl);
+    };
+  }
+  
+  function downImage() {
+    console.log(dataUrl);
+    //console.log(dataURItoBlob(dataUrl));
+    
+    //var url = (window.webkitURL || window.URL).createObjectURL(dataURItoBlob(dataUrl));
+    //window.location.href = url;
+  }
+  
+  function dataURItoBlob(dataURI) {
+    // convert base64/URLEncoded data component to raw binary data held in a string
+    var byteString;
+    if (dataURI.split(',')[0].indexOf('base64') >= 0)
+        byteString = atob(dataURI.split(',')[1]);
+    else
+        byteString = unescape(dataURI.split(',')[1]);
+
+    // separate out the mime component
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+    // write the bytes of the string to a typed array
+    var ia = new Uint8Array(byteString.length);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ia], {type:mimeString});
+  }
+</script>
+</html>
