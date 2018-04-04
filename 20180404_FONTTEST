@@ -1,0 +1,31 @@
+<html>
+  <head>
+    /**<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/hanna.css">**/
+    <style>
+    
+      @font-face {
+        font-family: 'Hanna';
+        font-style: normal;
+        src: url('BM-HANNA.eot');
+        src: url('BM-HANNA.eot?#iefix') format('embedded-opentype'),
+             url('BM-HANNA.woff2') format('woff2'),
+             url('BM-HANNA.woff') format('woff'),
+             url('BM-HANNA.ttf') format('truetype');
+             
+        //src: url('/font/BM-HANNA.eot');
+        //src: url('/font/BM-HANNA.eot?#iefix') format('embedded-opentype'),
+        //     url('/font/BM-HANNA.woff2') format('woff2'),
+        //     url('/font/BM-HANNA.woff') format('woff'),
+        //     url('/font/BM-HANNA.ttf') format('truetype');
+      }
+      body {
+        //font-family: 'Hanna', serif;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="font-family: 'Hanna';">다람쥐 헌 쳇바퀴에 타고파</div>
+    <div>다람쥐 헌 쳇바퀴에 타고파</div>
+  </body>
+</html>
