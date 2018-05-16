@@ -1,0 +1,10 @@
+안녕하세요. 일전에 문의 드렸었는데 위 메일과 같이
+
+모펍 미디에이션을 연동하여 광고를 노출하려고 하는데
+
+현재 애드파이에서 매체(Android App) - 슬롯 생성(banner) 후 슬롯의 오른쪽에 있는
+스크립트 (<scrpit> ...... </script> 모두) 를 모펍 Custom Javascript Network 에 입력해 두었습니다.
+
+이후 작업이 궁금한데 모펍 Plugin 을 이용하여 CreateBanner 를 하는건지... Banner Create 를 어떻게 해야할지 잘 모르겠네요.
+
+Custom Javascript Network 설정 작업 후의 것들을 자세히 좀 설명해 주시면 감사하겠습니다!!
