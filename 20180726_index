@@ -26,7 +26,7 @@
   font-size:0.8em;
 }
 .xxxxsize_txt {
-  font-size:1.2em;
+  font-size:1em;
 }
 .p_sty {
   margin:0.3em 0em 0.3em 0em;
@@ -98,211 +98,215 @@
 	<div data-role="popup" id="popupDetail" data-theme="a" style="width:100%; height:80%">
 		<form>
 			<div style="padding:10px 20px;" class="xxsize_txt">
-			      <table style="width:100%;border-spacing:0px;">
-  			      <tr>
-  			        <td>
-    			          <label for="p_01">형태: </label>
-        		        <input type="text" name="p_01" id="p_01" value="아파트" readonly>
-  			        </td>
-  			        <td>
-    			          <label for="p_02">지역: </label>
-        		        <input type="text" name="p_02" id="p_02" value="서울 강남구 대치동" readonly>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-    			          <label for="p_03">부동산명: </label>
-        		        <input type="text" name="p_03" id="p_03" value="땡땡 부동산" readonly>
-  			        </td>
-  			        <td>
-    			          <label for="p_04">아파트명: </label>
-        		        <input type="text" name="p_04" id="p_04" value="대치 SK VIEW" readonly>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-    			          <label for="p_05">상세: </label>
-        		        <input type="text" name="p_05" id="p_05" value="105동 호수 없음" readonly>
-  			        </td>
-  			        <td>
-    			          <label for="p_06">아파트명: </label>
-        		        <input type="text" name="p_06" id="p_06" value="30 평형" readonly>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-    			          <label for="p_07">매매가: </label>
-        		        <input type="text" name="p_07" id="p_07" value="390000 만원" readonly>
-  			        </td>
-  			        <td>
-    			          <label for="p_08">전세가: </label>
-        		        <input type="text" name="p_08" id="p_08" value="270000 만원" readonly>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td colspan="2">
-    			          <label for="p_09">특이사항: </label>
-      		          <textarea type="text" name="p_09" id="p_09" data-theme="a" readonly>어쩌구 저쩌구 졸라 길어서서서서서서서서서서서서어서서서서서서서서서서서서어서서서서서서서서서서서서어서서서서서서서서서서서서어서서서서서서서서서서서서</textarea>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-    			          <label for="p_10">현 전세가: </label>
-        		        <input type="text" name="p_10" id="p_10" value="250000 만원" readonly>
-  			        </td>
-  			        <td>
-    			          <label for="p_11">현 월세: </label>
-        		        <input type="text" name="p_11" id="p_11" value="2000 만원" readonly>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-    			          <label for="p_12">입주 가능일: </label>
-        		        <input type="text" name="p_12" id="p_12" value="2018-12-13" readonly>
-  			        </td>
-  			      </tr>
-			      </table>
+	      <table style="width:100%;border-spacing:0px;">
+		      <tr>
+		        <td>
+			          <label for="p_01">형태: </label>
+    		        <input type="text" name="p_01" id="p_01" value="아파트" readonly>
+		        </td>
+		        <td>
+			          <label for="p_02">지역: </label>
+    		        <input type="text" name="p_02" id="p_02" value="서울 강남구 대치동" readonly>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+			          <label for="p_03">부동산명: </label>
+    		        <input type="text" name="p_03" id="p_03" value="땡땡 부동산" readonly>
+		        </td>
+		        <td>
+			          <label for="p_04">아파트명: </label>
+    		        <input type="text" name="p_04" id="p_04" value="대치 SK VIEW" readonly>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+			          <label for="p_05">상세: </label>
+    		        <input type="text" name="p_05" id="p_05" value="105동 호수 없음" readonly>
+		        </td>
+		        <td>
+			          <label for="p_06">아파트명: </label>
+    		        <input type="text" name="p_06" id="p_06" value="30 평형" readonly>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+			          <label for="p_07">매매가: </label>
+    		        <input type="text" name="p_07" id="p_07" value="390000 만원" readonly>
+		        </td>
+		        <td>
+			          <label for="p_08">전세가: </label>
+    		        <input type="text" name="p_08" id="p_08" value="270000 만원" readonly>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td colspan="2">
+			          <label for="p_09">특이사항: </label>
+  		          <textarea type="text" name="p_09" id="p_09" data-theme="a" readonly>어쩌구 저쩌구 졸라 길어서서서서서서서서서서서서어서서서서서서서서서서서서어서서서서서서서서서서서서어서서서서서서서서서서서서어서서서서서서서서서서서서</textarea>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+			          <label for="p_10">현 전세가: </label>
+    		        <input type="text" name="p_10" id="p_10" value="250000 만원" readonly>
+		        </td>
+		        <td>
+			          <label for="p_11">현 월세: </label>
+    		        <input type="text" name="p_11" id="p_11" value="2000 만원" readonly>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>
+			          <label for="p_12">입주 가능일: </label>
+    		        <input type="text" name="p_12" id="p_12" value="2018-12-13" readonly>
+		        </td>
+		      </tr>
+	      </table>
 			</div>
 		</form>
 	</div>
 	
 	<div data-role="popup" id="popupInsert" data-theme="a" style="width:100%; height:80%">
-		<form>
-			<div style="padding:10px 10px;" class="xxsize_txt">
-			      <table style="width:100%;border-spacing:0px;">
-  			      <tr>
-  			        <td>
-      		        <select id="landtypes" name="landtypes" class="small_txt" onchange="changeselect(this);">
-      		          <option value="apt">아파트</option>
-      		          <option value="bun">분양권</option>
-      		          <option value="reb">재개발/재건축</option>
-      		        </select>
-  			        </td>
-  			        <td>
-      		        <select name="levelone" class="small_txt">
-      		          <option value="none">-- 지역 --</option>
-      		          <option value="01">서울</option>
-      		          <option value="02">경기</option>
-      		          <option value="03">인천</option>
-      		          <option value="04">부산</option>
-      		          <option value="05">대전</option>
-      		          <option value="06">대구</option>
-      		          <option value="07">울산</option>
-      		          <option value="08">세종</option>
-      		          <option value="09">광주</option>
-      		          <option value="10">강원도</option>
-      		          <option value="11">충청북도</option>
-      		          <option value="12">충청남도</option>
-      		          <option value="13">경상북도</option>
-      		          <option value="14">경상남도</option>
-      		          <option value="15">전라북도</option>
-      		          <option value="16">전라남도</option>
-      		          <option value="17">제주도</option>
-      		        </select>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-      		        <select name="leveltwo" class="small_txt">
-      		          <option value="none">-- 시군구 --</option>
-      		          <option value="011">강남구</option>
-      		          <option value="012">강동구</option>
-      		          <option value="013">강북구</option>
-      		          <option value="014">강서구</option>
-      		          <option value="015">관악구</option>
-      		          <option value="016">광진구</option>
-      		          <option value="017">구로구</option>
-      		          <option value="018">금천구</option>
-      		        </select>
-  			        </td>
-  			        <td>
-      		        <select name="levelthree" class="small_txt">
-      		          <option value="none">-- 읍면동 --</option>
-      		          <option value="0111">개포동</option>
-      		          <option value="0112">논현동</option>
-      		          <option value="0113">대치동</option>
-      		          <option value="0114">도곡동</option>
-      		          <option value="0115">삼성동</option>
-      		        </select>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-      		        <input type="text" id="storenm" value="" placeholder="부동산 이름" data-theme="a">
-  			        </td>
-  			        <td>
-      		        <input type="number" id="telno" value="" placeholder="전화번호 (숫자만)" data-theme="a">
-  			        </td>
-  			      <tr class="typeone typetwo">
-  			        <td colspan="2">
-      		        <input type="text" id="landnm" value="" placeholder="아파트명" data-theme="a">
-  			        </td>
-  			      </tr>
-  			      <tr class="typethree">
-  			        <td colspan="2">
-      		        <input type="text" id="locationnm" value="" placeholder="구역명" data-theme="a">
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-      		        <input type="text" id="landsize" value="" placeholder="평형/타입" data-theme="a">
-  			        </td>
-  			        <td>
-      		        <input type="text" id="landdetail" value="" placeholder="동/호수" data-theme="a">
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-      		        <input type="number" id="landprice" value="" placeholder="가격" data-theme="a">
-  			        </td>
-  			        <td>
-      		        <label for="canchange">&nbsp조정가능</label><input type="checkbox" name="canchange" id="canchange" checked="checked">
-  			        </td>
-  			      </tr>
-  			      <tr class="typetwo">
-  			        <td>
-      		        <input type="number" id="primium" value="" placeholder="프리미엄" data-theme="a">
-  			        </td>
-  			        <td>
-      		        <input type="number" id="extprice" value="" placeholder="기타비용" data-theme="a">
-  			        </td>
-  			      </tr>
-  			      <tr class="typeone">
-  			        <td>
-      		        <input type="number" id="recentrent" value="" placeholder="전세가" data-theme="a">
-  			        </td>
-  			        <td>
-      		        <input type="number" id="recentmonth" value="" placeholder="월세" data-theme="a">
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td colspan="2">
-      		        <textarea type="text" id="lendext" value="" placeholder="특이사항" data-theme="a"></textarea>
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-      		        <input type="number" id="dealprice" value="" placeholder="복비" data-theme="a">
-  			        </td>
-  			        <td>
-      		        <input type="number" id="takeprice" value="" placeholder="투자금" data-theme="a">
-  			        </td>
-  			      </tr>
-  			      <tr>
-  			        <td>
-      		        <select name="landstat" class="small_txt">
-      		          <option value="none">-- 상태 --</option>
-      		          <option value="ings">거래가능</option>
-      		          <option value="comp">거래완료</option>
-      		          <option value="mine">보유중</option>
-      		        </select>
-  			        </td>
-  			      </tr>
-			      </table>
-
-		    	<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check xxxxsize_txt">등록하기</button>
-			</div>
-		</form>
+		<div style="padding:10px 10px;" class="xxsize_txt">
+      <table style="width:100%;border-spacing:0px;">
+	      <tr>
+	        <td>
+		        <select id="landtypes" name="landtypes" class="small_txt" onchange="changeselect(this);">
+		          <option value="apt">아파트</option>
+		          <option value="bun">분양권</option>
+		          <option value="reb">재개발/재건축</option>
+		        </select>
+	        </td>
+	        <td>
+		        <select name="levelone" class="small_txt">
+		          <option value="none">-- 지역 --</option>
+		          <option value="01">서울</option>
+		          <option value="02">경기</option>
+		          <option value="03">인천</option>
+		          <option value="04">부산</option>
+		          <option value="05">대전</option>
+		          <option value="06">대구</option>
+		          <option value="07">울산</option>
+		          <option value="08">세종</option>
+		          <option value="09">광주</option>
+		          <option value="10">강원도</option>
+		          <option value="11">충청북도</option>
+		          <option value="12">충청남도</option>
+		          <option value="13">경상북도</option>
+		          <option value="14">경상남도</option>
+		          <option value="15">전라북도</option>
+		          <option value="16">전라남도</option>
+		          <option value="17">제주도</option>
+		        </select>
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+		        <select name="leveltwo" class="small_txt">
+		          <option value="none">-- 시군구 --</option>
+		          <option value="011">강남구</option>
+		          <option value="012">강동구</option>
+		          <option value="013">강북구</option>
+		          <option value="014">강서구</option>
+		          <option value="015">관악구</option>
+		          <option value="016">광진구</option>
+		          <option value="017">구로구</option>
+		          <option value="018">금천구</option>
+		        </select>
+	        </td>
+	        <td>
+		        <select name="levelthree" class="small_txt">
+		          <option value="none">-- 읍면동 --</option>
+		          <option value="0111">개포동</option>
+		          <option value="0112">논현동</option>
+		          <option value="0113">대치동</option>
+		          <option value="0114">도곡동</option>
+		          <option value="0115">삼성동</option>
+		        </select>
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+		        <input type="text" id="storenm" value="" placeholder="부동산 이름" data-theme="a">
+	        </td>
+	        <td>
+		        <input type="number" id="telno" value="" placeholder="전화번호 (숫자만)" data-theme="a">
+	        </td>
+	      <tr class="typeone typetwo">
+	        <td colspan="2">
+		        <input type="text" id="landnm" value="" placeholder="아파트명" data-theme="a">
+	        </td>
+	      </tr>
+	      <tr class="typethree">
+	        <td colspan="2">
+		        <input type="text" id="locationnm" value="" placeholder="구역명" data-theme="a">
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+		        <input type="text" id="landsize" value="" placeholder="평형/타입" data-theme="a">
+	        </td>
+	        <td>
+		        <input type="text" id="landdetail" value="" placeholder="동/호수" data-theme="a">
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+		        <input type="number" id="landprice" value="" placeholder="가격" data-theme="a">
+	        </td>
+	        <td>
+		        <label for="canchange">&nbsp조정가능</label><input type="checkbox" name="canchange" id="canchange" checked="checked">
+	        </td>
+	      </tr>
+	      <tr class="typetwo">
+	        <td>
+		        <input type="number" id="primium" value="" placeholder="프리미엄" data-theme="a">
+	        </td>
+	        <td>
+		        <input type="number" id="extprice" value="" placeholder="기타비용" data-theme="a">
+	        </td>
+	      </tr>
+	      <tr class="typeone">
+	        <td>
+		        <input type="number" id="recentrent" value="" placeholder="전세가" data-theme="a">
+	        </td>
+	        <td>
+		        <input type="number" id="recentmonth" value="" placeholder="월세" data-theme="a">
+	        </td>
+	      </tr>
+	      <tr>
+	        <td colspan="2">
+		        <textarea type="text" id="lendext" value="" placeholder="특이사항" data-theme="a"></textarea>
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+		        <input type="number" id="dealprice" value="" placeholder="복비" data-theme="a">
+	        </td>
+	        <td>
+		        <input type="number" id="takeprice" value="" placeholder="투자금" data-theme="a">
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+		        <select name="landstat" class="small_txt">
+		          <option value="none">-- 상태 --</option>
+		          <option value="ings">거래가능</option>
+		          <option value="comp">거래완료</option>
+		          <option value="mine">보유중</option>
+		        </select>
+	        </td>
+	      </tr>
+	      <tr>
+	        <td>
+	          <button onclick="closeCreate()" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check xxxxsize_txt">등록</button>
+	        </td>
+	        <td>
+  	        <button onclick="closeCreate()" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check xxxxsize_txt">계속 등록</button>
+	        </td>
+	      </tr>
+      </table>
+		</div>
 	</div>
 
 </div><!-- /page -->
@@ -387,6 +391,10 @@
     $("input").val("");
     $("#lendext").val("");
     $("#canchange").prop('checked', true).checkboxradio('refresh');
+  }
+  
+  function closeCreate() {
+    $("#popupInsert").popup("close");
   }
 </script>
 </html>
